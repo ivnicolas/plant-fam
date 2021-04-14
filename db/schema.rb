@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 2021_04_13_203007) do
 
   create_table "plant_lists", force: :cascade do |t|
     t.string "list_name"
-    t.string "plant_id"
-    t.string "user_id"
+    t.integer "plant_id"
+    t.integer "user_id"
     t.string "plant_nickname"
     t.string "size"
     t.string "notes_on_tending"
