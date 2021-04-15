@@ -6,11 +6,12 @@
 <br><br>
 <h4>Click to View Your Plant Lists!<h4>
 <br><br>
-    <% @list = @user_plant_list.collect{|list| list.list_name}.uniq%>
-    <h5> <% @list.each do |list|%></h5>
-        <a href = "/plantlists"> <%=list %></a>
-    <% end %>
-    <br><br>
+ <% list= @user.plant_lists.collect{|list| list.list_name}.uniq%>
+ <% list.each do |listname| %>
+    <h5> <a href="/<%=listname%>"> <%=listname %> </a></h5>
+ <% end %>
+
+   
 
 
 <h4>Sign Out</h4>

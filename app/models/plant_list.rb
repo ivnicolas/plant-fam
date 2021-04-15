@@ -1,4 +1,4 @@
-class Plant_List<ActiveRecord::Base
+class PlantList<ActiveRecord::Base
     belongs_to :plant
     belongs_to :user
 end 
