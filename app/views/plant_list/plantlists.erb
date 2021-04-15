@@ -1,3 +1,13 @@
 <h1> <%= @listname %> </h1>
 
+<%@user.plant_lists.collect do |plants|%>
+    <%if plants.list_name == @listname%>
+       <% @plant=@plant_directory.find_by_id(plants.plant_id)%>
+       <%= @plant.name%>
+       <br>
+    <%end%>
+
+        
+<%end%> 
+
      
