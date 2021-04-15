@@ -1,4 +1,4 @@
 class Plant_List<ActiveRecord::Base
-    #has_many :plants
-    #belongs_to :user
+    belongs_to :plant
+    belongs_to :user
 end 
