@@ -1,0 +1,11 @@
+
+
+<h2> Current List Name: <%= @listname %> </h2>
+
+<form method="POST" action="/<%= @listname %>">
+    
+        <input type="hidden" id="hidden" name="_method" value="PATCH">
+
+    <p> New List Name: <input type="text" name="new_list_name" value="<%= @listname %>" ></p>
+    <input type="submit">
+ </form>

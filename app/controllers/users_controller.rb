@@ -9,4 +9,13 @@ class UsersController < ApplicationController
         #@user_plant_list.collect{|list| list.list_name}.uniq
         erb :"users/homepage"
     end 
+
+    post "/homepage" do 
+        list = current_user.plant_lists.build(params)
+        if list.save 
+            redirect "/homepage"
+        else 
+            redirect "/plantlist/new"
+        end
+    end 
 end 

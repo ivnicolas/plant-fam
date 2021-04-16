@@ -4,14 +4,16 @@
 <br><br>
 <h6>A fun message goes here</h6>
 <br><br>
-<h4>Click to View Your Plant Lists!<h4>
-<br><br>
+<h4>Lists:<h4>
+<br>
  <% list= @user.plant_lists.collect{|list| list.list_name}.uniq%>
  <% list.each do |listname| %>
-    <h5> <a href="/<%=listname%>"> <%=listname %> </a></h5>
+    <h4> <a href="/<%=listname%>"> <%=listname %> </a></h4>
+    <h6> <a href ="/<%=listname%>/edit">Edit <%=listname%> List</a> || <a href ="/<%=listname%>/delete">Delete <%=listname%> List</a></h6>
+    <br>
  <% end %>
-
-   
+ <h6><a href="/plantlist/new">Add New List!<a></h6> 
+ <br>
 
 
 <h4>Sign Out</h4>
