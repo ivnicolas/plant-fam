@@ -1,4 +1,7 @@
 class PlantList<ActiveRecord::Base
     belongs_to :plant
     belongs_to :user
-end 
+
+    validates :list_name, presence: true
+    validates :list_name, uniqueness: true
+end  

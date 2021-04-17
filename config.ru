@@ -7,7 +7,7 @@ end
 run ApplicationController
 
 use Rack::MethodOverride
+use SessionsController
 use UsersController
 use PlantsController
 use PlantListsController
-use SessionsController

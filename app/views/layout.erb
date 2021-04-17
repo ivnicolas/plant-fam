@@ -12,6 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,400;1,800&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
@@ -19,6 +24,10 @@
         <%= yield %>
 
       <footer class="branding">
+      <% if logged_in? %>
+        <h6><a href="/homepage"> Return to Homepage </a></h6>
+        <h6><a href="/signout">Sign out</a></h6>
+      <% end %>
         <small>&copy; 2021 <strong>PlantFam</strong></small>
       </footer>
     </div>

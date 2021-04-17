@@ -1,4 +1,4 @@
-Plant_List.destroy_all
+PlantList.destroy_all
 User.destroy_all
 Plant.destroy_all
 
@@ -39,7 +39,7 @@ end
 
 30.times do
 
-    Plant_List.create(
+    PlantList.create(
        
         plant: Plant.all.sample,
         user: User.all.sample,

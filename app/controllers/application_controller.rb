@@ -13,6 +13,18 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
+  post "/" do
+    @user = User.find_by(email: params[:email])
+    # @user=User.find_by(username: params[:username], password: params[:password])
+    if @user && @user.authenticate(params[:password])
+        session[:user_id] = @user.id 
+        redirect to '/homepage'
+    else 
+       
+        erb :welcome
+    end
+end
+
   helpers do
 
     def logged_in?

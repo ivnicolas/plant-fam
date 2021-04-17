@@ -1,0 +1,11 @@
+<h1> Edit Profile </h1>
+
+<form method="POST" action="/user/edit">
+    
+        <input type="hidden" id="hidden" name="_method" value="PATCH">
+    <p>  Name: <input type="text" name="name" value="<%= @user.name %>" ></p>
+    <p>  Email: <input type="text" name="email" value="<%= @user.email %>" ></p>
+    <p>  City: <input type="text" name="city" value="<%= @user.city %>" ></p>
+    <p>  Zipcode: <input type="text" name="zipcode" value="<%= @user.zipcode %>" ></p>
+    <input type="submit">
+ </form>

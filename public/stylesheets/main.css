@@ -17,6 +17,7 @@
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
+    font-family: 'Open Sans', sans-serif;
   }
 
   .wrapper {
@@ -33,6 +34,7 @@
   h1 {
     font-size: 36px;
     line-height: 54px;
+  
   }
 
   h2 {

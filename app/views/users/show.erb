@@ -1,0 +1,13 @@
+<h2> Profile </h2>
+Name: <%= @user.name %>
+<br><br>
+Email:  <%= @user.email %>
+<br><br>
+City:  <%= @user.city %>
+<br><br>
+Zipcode:  <%= @user.zipcode %>
+
+<% if @session_user.id == @user.id %>
+    <h6><a href= "user/edit">Edit Profile</a></h6>
+<% end %>
+<br><br>
