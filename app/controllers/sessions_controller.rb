@@ -16,7 +16,6 @@ class SessionsController < ApplicationController
 
     get '/signout' do
         session.clear
-        # binding.pry
         redirect "/"
     end
 

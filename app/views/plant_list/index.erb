@@ -1,16 +1,20 @@
 <h1> <%= @listname %> </h1>
 
-
     <%@user.plant_lists.map do |plants|%>
         <%if plants.list_name == @listname && plants.plant_id != nil%>
             <% @plant=@plant_directory.find_by_id(plants.plant_id)%>
-            <%= @plant.name%>
+            <% @listcontents << @plant%>
             <br>
         <%end%>      
     <%end%> 
-
-
-
+    <% if @listcontents.length == 0 %>
+        <h6> You have no plants sucker! </h6> 
+    <% else %>
+        <% @listcontents.collect do |plant| %>
+            <%= plant.name %>
+            <br><br>
+            <% end %>
+      <% end %>
 
 <br><br>
 
