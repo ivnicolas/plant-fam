@@ -1,15 +1,15 @@
 <div class="container">
-  <header><img src="images/corneal-small.png" class="img-responsive main-image"></header>
+  <header><img src="images/plant-fam-header-4.png" alt= "Flower Bouquet" class="center"></header>
   <div class="col-md-8 col-md-offset-2">
-     <h2>Welcome to Plant Fam!</h2>
+     <h1 id="greeting-title">Welcome to Plant Fam!</h1>
 
      
      <h5>Please Login</h5>
-     <br> <br>
+     <br> <br> 
 
    
     <% if @user && @user.errors %>
-      <h3 class="error"><%= @user.errors.full_messages.to_sentence  %></h3>
+      <h5 class="error"><%= @user.errors.full_messages.to_sentence  %></h5>
     <% end %>
     <br>
      <form action="/" method="post">
@@ -17,10 +17,10 @@
      <input type="text" name="email" id="email"/>
      <label for="password">Password:</label>
      <input type="password" name="password" id="password"/>
-     <input type="submit" value="Log In">
+     <input class="waves-effect deep-orange accent-1 btn" type="submit" value="Log In">
      </form>
      <br> 
-     <h4>Dont Have an Account ? <a href ="/signup">Sign Up Here</a></h4>
+     <h5>Dont Have an Account ? <a href ="/signup">Sign Up Here</a></h5>
 
   </div>
 </div>

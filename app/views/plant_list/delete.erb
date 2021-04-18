@@ -1,5 +1,8 @@
-<h5> Are you sure you want to delete <%= @listname%>?</h5>
-<form method="POST" action="/plantlist/<%= @listname %>">
-<input type="hidden" id="hidden" name="_method" value="DELETE">
-<input type="submit" value="DELETE">
-</form>
+
+        <h5 class="form-heading"> Are you sure you want to delete: <%= @listname%>? 🥺	</h5>
+        <form method="POST" action="/plantlist/<%= @listname %>">
+        <input type="hidden" id="hidden" name="_method" value="DELETE">
+        <input class="waves-effect deep-orange accent-1 btn" type="submit" value="DELETE">
+        </form>
+
+        

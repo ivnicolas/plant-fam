@@ -1,4 +1,4 @@
-<h2> Profile </h2>
+<h1> Profile </h1>
 Name: <%= @user.name %>
 <br><br>
 Email:  <%= @user.email %>
@@ -6,6 +6,7 @@ Email:  <%= @user.email %>
 City:  <%= @user.city %>
 <br><br>
 Zipcode:  <%= @user.zipcode %>
+<br><br>
 
 <% if @session_user.id == @user.id %>
     <h6><a href= "user/edit">Edit Profile</a></h6>

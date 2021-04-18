@@ -1,11 +1,11 @@
 
 
-<h2> Current List Name: <%= @listname %> </h2>
+<h2 class= "list-title"> Editing: <%= @listname %> </h2>
 
 <form method="POST" action="/plantlist/<%= @listname %>">
     
         <input type="hidden" id="hidden" name="_method" value="PATCH">
 
-    <p> New List Name: <input type="text" name="new_list_name" value="<%= @listname %>" ></p>
-    <input type="submit">
- </form>
+    <h4 class="form-heading"> New List Name: <input type="text" name="new_list_name" value="<%= @listname %>" ></h4>
+    <input class="waves-effect deep-orange accent-1 btn" type="submit">
+ </form>  
