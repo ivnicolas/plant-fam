@@ -60,7 +60,7 @@ class PlantListsController < ApplicationController
 
 
    delete "/plantlist/:listname" do
-        PlantList.where('list_name = ?', params[:listname]).destroy_all
+        PlantList.where(list_name: params[:listname], user_id: session[:user_id]).destroy_all
         redirect "/homepage"
    end 
 
