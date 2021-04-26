@@ -1,0 +1,12 @@
+<h1> <%= @associated_list %> </h1>
+ 
+        <% @plants.collect do |user_plant| %>
+                <h6 class= "form-heading"><a href="/<%= user_plant.associated_list %>/plants/<%=user_plant.plant.name%>"><%= user_plant.plant.name %></a></h6>
+                <h6>Size: <%= user_plant.size %></h6>
+            <% end %>
+    
+
+<br><br>
+
+
+     

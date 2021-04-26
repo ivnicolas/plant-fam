@@ -11,10 +11,11 @@ class UsersController < ApplicationController
 
     post "/homepage" do 
         list = current_user.user_plants.build(params)
+    #    binding.pry
         if list.save 
             redirect "/homepage"
         else 
-            redirect "/list/new"
+            redirect "/user_plants/new"
         end
     end 
 

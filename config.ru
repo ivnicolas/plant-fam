@@ -10,4 +10,4 @@ use Rack::MethodOverride
 use SessionsController
 use UsersController
 use PlantsController
-use ListsController
+use UserPlantsController

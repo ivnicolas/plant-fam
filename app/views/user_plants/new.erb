@@ -1,0 +1,51 @@
+<h1 id="new-list-form"> Add A New Plant</h1>
+
+
+<form method="POST" action="/homepage">
+
+
+
+<h5 class="form-heading"> List: <input type="text" name="associated_list" ></h5>
+<h5 class="form-heading"> Plant Nickname: <input type="text" name="plant_nickname" ></h5>
+
+<h5 class="form-heading"> Plant: </h5>
+   
+        <% @plants.each do | plant |%>
+            <label>
+            <input class="with-gap" name="plant_id" type="radio" value="<%= plant.id %>" checked />
+            <span><%= plant.name %></span>
+            </label>
+        <% end %>
+
+
+<h5 class="form-heading"> Size: </h5>
+<label>
+      <input class="with-gap" name="size" type="radio" value="Small" checked />
+      <span>SMALL</span>
+</label>
+<label>
+      <input class="with-gap" name="size" type="radio" value="Medium" checked />
+      <span>MEDIUM</span>
+</label>
+<label>
+      <input class="with-gap" name="size" type="radio" value="Large" checked />
+      <span>LARGE</span>
+</label>
+
+
+<h5 class="form-heading"> Has Been Watered? </h5>
+
+<label>
+      <input class="with-gap" name="has_been_watered" type="radio" value="true" checked />
+      <span>YES</span>
+</label>
+<label>
+      <input class="with-gap" name="has_been_watered" type="radio" value="false" checked />
+      <span>NO</span>
+</label>
+
+<br><br>
+
+
+<h5><input class="waves-effect deep-orange accent-1 btn" type="submit" value="Add"></h5>
+</form>

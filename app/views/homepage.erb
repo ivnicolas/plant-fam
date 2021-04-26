@@ -3,13 +3,13 @@
 </h4> <a class="waves-effect waves-teal btn-flat" href = "/user">View Profile</a> </h4>
 <br><br>
 <h6 id="main-message">Plant Fam is a community where members can share and build there gardens with one another. 
-Explore your current Plant Lists below or Add a new one! Let's grow together! </h6>
+Explore your current Plants below or Add a new one! Let's grow together! </h6>
 <br><br>
- <% list= @user.user_plants.collect{|user_list| user_list.list}.uniq%>
- <% list.each do |listname| %>
-    <h4 class="list-title"> <a href="/list/<%=listname%>"> <%=listname %> </a></h4>
-    <h6> <a class="waves-effect waves-teal btn-flat" href ="/list/<%=listname%>/edit">Edit <%=listname%> List</a>  <a class="waves-effect waves-teal btn-flat" href ="/list/<%=listname%>/delete">Delete <%=listname%> List</a></h6>
+ <% associated_list= @user.user_plants.collect{|user_list| user_list.associated_list}.uniq%>
+ <% associated_list.each do |listname| %>
+    <h4 class="list-title"> <a href="/user_plants/<%=listname%>"> <%=listname %> </a></h4>
+    <h6> <a class="waves-effect waves-teal btn-flat" href ="/user_plants/<%=listname%>/edit">Edit <%=listname%> </a>  <a class="waves-effect waves-teal btn-flat" href ="/user_plants/<%=listname%>/delete">Delete <%=listname%></a></h6>
     <br>
  <% end %>
- <h6><a class="waves-effect deep-orange accent-1 btn" href="/list/new" >Add New List!<a></h6> 
+ <h6><a class="waves-effect deep-orange accent-1 btn" href="/user_plants/new" >Add New!<a></h6> 
  <br>

@@ -1,0 +1,11 @@
+
+
+<h2 class= "list-title"> Editing: <%= @associated_list %> </h2>
+
+<form method="POST" action="/user_plants/<%= @associated_list%>">
+    
+        <input type="hidden" id="hidden" name="_method" value="PATCH">
+
+    <h4 class="form-heading"> New List Name: <input type="text" name="new_associated_list" value="<%= @associated_list %>" ></h4>
+    <input class="waves-effect deep-orange accent-1 btn" type="submit">
+ </form>  

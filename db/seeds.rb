@@ -46,7 +46,7 @@ end
        
         plant: Plant.all.sample,
         user: User.all.sample,
-        list: list.sample,
+        associated_list: list.sample,
         plant_nickname: "Give Your Plant a Nickname!",
         size: size.sample,
         has_been_watered: watered.sample,
