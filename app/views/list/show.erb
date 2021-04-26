@@ -7,9 +7,8 @@
             <% if user_plant.plant == nil %>
                 <h6> You have no plants sucker! </h6> 
             <% else %>
-                <h5 class= "form-heading"><a href="/<%= user_plant.list %>/plants/<%=user_plant.plant.name%>"><%= user_plant.plant.name %></a></h5>
-                <h6>Size: <%= user_plant.size %></6>
-            <br>
+                <h6 class= "form-heading"><a href="/<%= user_plant.list %>/plants/<%=user_plant.plant.name%>"><%= user_plant.plant.name %></a></h6>
+                <h6>Size: <%= user_plant.size %></h6>
             <% end %>
       <% end %>
 

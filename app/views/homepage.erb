@@ -8,7 +8,7 @@ Explore your current Plant Lists below or Add a new one! Let's grow together! </
  <% list= @user.user_plants.collect{|user_list| user_list.list}.uniq%>
  <% list.each do |listname| %>
     <h4 class="list-title"> <a href="/list/<%=listname%>"> <%=listname %> </a></h4>
-    <h6> <a class="waves-effect waves-teal btn-flat" href ="/list/<%=listname%>/edit">Edit <%=listname%> List</a>  <a class="waves-effect waves-teal btn-flat" href ="/plantlist/<%=listname%>/delete">Delete <%=listname%> List</a></h6>
+    <h6> <a class="waves-effect waves-teal btn-flat" href ="/list/<%=listname%>/edit">Edit <%=listname%> List</a>  <a class="waves-effect waves-teal btn-flat" href ="/list/<%=listname%>/delete">Delete <%=listname%> List</a></h6>
     <br>
  <% end %>
  <h6><a class="waves-effect deep-orange accent-1 btn" href="/list/new" >Add New List!<a></h6> 

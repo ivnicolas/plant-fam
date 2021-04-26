@@ -2,6 +2,7 @@ class ListsController < ApplicationController
   
   get "/list/new" do 
     if logged_in?
+      @plants=Plant.all
       erb :"list/new"
     else 
       redirect "/"
