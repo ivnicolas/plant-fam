@@ -3,18 +3,18 @@ class UsersController < ApplicationController
     get '/homepage' do 
         if logged_in?
             @user=User.find_by_id(session[:user_id])
-            erb :"users/homepage"
+            erb :homepage
         else 
             redirect "/"
         end 
     end 
 
     post "/homepage" do 
-        list = current_user.plant_lists.build(params)
+        list = current_user.user_plants.build(params)
         if list.save 
             redirect "/homepage"
         else 
-            redirect "/plantlist/new"
+            redirect "/list/new"
         end
     end 
 

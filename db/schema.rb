@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_13_203007) do
-
-  create_table "plant_lists", force: :cascade do |t|
-    t.string "list_name"
-    t.integer "plant_id"
-    t.integer "user_id"
-    t.string "plant_nickname"
-    t.string "size"
-    t.string "notes_on_tending"
-  end
+ActiveRecord::Schema.define(version: 2021_04_25_220617) do
 
   create_table "plants", force: :cascade do |t|
     t.string "name"
@@ -27,6 +18,16 @@ ActiveRecord::Schema.define(version: 2021_04_13_203007) do
     t.string "sunlight_needs"
     t.string "watering_needs"
     t.string "best_environment"
+  end
+
+  create_table "user_plants", force: :cascade do |t|
+    t.string "list"
+    t.integer "plant_id"
+    t.integer "user_id"
+    t.string "plant_nickname"
+    t.string "size"
+    t.string "notes_on_tending"
+    t.boolean "has_been_watered"
   end
 
   create_table "users", force: :cascade do |t|

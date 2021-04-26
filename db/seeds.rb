@@ -1,4 +1,4 @@
-PlantList.destroy_all
+UserPlant.destroy_all
 User.destroy_all
 Plant.destroy_all
 
@@ -9,8 +9,11 @@ environment= ["Dry","Humid","Moderate"]
 plants= ["Aloe Vera","Yucca","Spider Plant","Peace Lily","English Ivy",
 "Rubber Plant","Philodendron","Cactus","Snake Plant","Dieffenbachia","Fiddle Leaf Fig",
 "Chinese Money Plant","African Violet"]
+watered=[true,false]
+list=["My Plants","Plants I Want","Plants for Friends"]
 
-5.times do
+
+10.times do
 
     User.create(
     name: Faker::Name.name ,
@@ -23,7 +26,7 @@ plants= ["Aloe Vera","Yucca","Spider Plant","Peace Lily","English Ivy",
 
 end
 
-10.times do
+13.times do
 
     Plant.create(
         name: plants.uniq.sample,
@@ -37,15 +40,16 @@ end
 end
 
 
-30.times do
+60.times do
 
-    PlantList.create(
+    UserPlant.create(
        
         plant: Plant.all.sample,
         user: User.all.sample,
-        list_name: "My Plants",
+        list: list.sample,
         plant_nickname: "Give Your Plant a Nickname!",
-        size: size.sample ,
+        size: size.sample,
+        has_been_watered: watered.sample,
         notes_on_tending: "User hasn't entered Notes"
     )
 

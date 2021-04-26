@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
     has_secure_password 
-    has_many :plant_lists 
-    has_many :plants, through: :plant_lists
+    has_many :user_plants 
+    has_many :plants, through: :user_plants
     
 
     validates :name, :email, presence: true

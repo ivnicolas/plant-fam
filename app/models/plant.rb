@@ -1,6 +1,6 @@
 class Plant < ActiveRecord::Base
-    has_many :plant_lists
-    has_many :users, through: :plant_lists
+    has_many :user_plants
+    has_many :users, through: :user_plants
    
 
     validates :name, uniqueness: true

@@ -1,0 +1,19 @@
+<h1> <%= @listname %> </h1>
+
+<%# Go through @plants. If a user_plant on the list does not have a plant attribute then for this particular list they have no plants. %>
+<%#  Else, print out the name for plant %>
+
+        <% @plants.collect do |user_plant| %>
+            <% if user_plant.plant == nil %>
+                <h6> You have no plants sucker! </h6> 
+            <% else %>
+                <h5 class= "form-heading"><a href="/<%= user_plant.list %>/plants/<%=user_plant.plant.name%>"><%= user_plant.plant.name %></a></h5>
+                <h6>Size: <%= user_plant.size %></6>
+            <br>
+            <% end %>
+      <% end %>
+
+<br><br>
+
+
+     

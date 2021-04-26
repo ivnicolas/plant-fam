@@ -1,6 +1,6 @@
 
         <h5 class="form-heading"> Are you sure you want to delete: <%= @listname%>? 🥺	</h5>
-        <form method="POST" action="/plantlist/<%= @listname %>">
+        <form method="POST" action="/list/<%= @listname %>">
         <input type="hidden" id="hidden" name="_method" value="DELETE">
         <input class="waves-effect deep-orange accent-1 btn" type="submit" value="DELETE">
         </form>
